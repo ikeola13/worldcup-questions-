@@ -1,0 +1,71 @@
+
+
+<p style="text-align: center; padding: 30px; ">
+    <button style="cursor: pointer;" routerLink="/all">
+      View All Questions
+    </button>
+    </p>
+    
+    
+    <div *ngIf="!isPosted" style="margin: 0 auto; width: 60%; padding: 10px">
+      <p style="text-align: center; font-size: 30px">New Question</p>
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Question</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" #question></textarea>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Option A</label>
+          <input type="title" class="form-control" id="exampleFormControlInput1" #optiona>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Option B</label>
+          <input type="title" class="form-control" id="exampleFormControlInput1" #optionb>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Option C</label>
+          <input type="title" class="form-control" id="exampleFormControlInput1" #optionc>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Option D</label>
+          <input type="title" class="form-control" id="exampleFormControlInput1" #optiond>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">ANSWER</label>
+          <input type="title" class="form-control" id="exampleFormControlInput1" #answer>
+        </div>
+    
+        <div class="form-group">
+          <label for="exampleFormControlInput1">COUNTRY</label>
+          <select class="form-control" #country>
+            <option></option>
+            <option value="brazil" >Brazil</option>
+            <option>Nigeria</option>
+            <option>Egypt</option>
+            <option>Spain</option>
+            <option>Germany</option>
+            <option>Russia</option>
+            <option>Portugal</option>
+            <option>England</option>
+            <option>Argentina</option>
+            <option>General</option>
+    
+          </select>
+    
+        </div>
+    
+        <div>
+          <button type="button" class="btn btn-dark but" (click)="submit(question,optiona,optionb,optionc,optiond,answer,country)">Submit</button>
+        </div>
+      </form>
+    </div>
+    
+    <div *ngIf="isPosted" style="text-align: center">
+    
+      <p>Question Created</p>
+      Thanks!
+      <p>
+      <button (click)="another1()">Another Question ? </button>
+    </p>
+    
+    </div>

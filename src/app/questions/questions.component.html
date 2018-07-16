@@ -1,0 +1,28 @@
+<p style="text-align: center">
+  <button routerLink="/create">
+    Create New Question
+  </button>
+
+</p>
+<div *ngFor="let q of questions" class="arr">
+  <p>
+    Question : {{q.question}}
+  </p>
+  <p>
+    
+      Option A : {{q.A}}<br>
+      Option B: {{q.B}} <br>
+      Option C: {{q.C}} <br>
+      Option D: {{q.D}} <br>
+      Answer: {{q.ANS}}
+  </p>
+
+  <p>
+    <a style="background-color: white;
+    color: black;
+    padding: 10px;
+    cursor: pointer;" (click)="delete(q.id)">Delete Question</a>
+  </p>
+  
+
+</div>
